@@ -1,13 +1,25 @@
 import './style.scss';
+import React from 'react';
 
-const Key = () => {
+interface KeyConfig {
+    val: string;
+    order: string
+}
+
+const Key: React.FC<KeyConfig> = ({val, order}) => {
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        // update current state
+        console.log('value', e.currentTarget.textContent);
+    }
+    
     return(
         <button
-            onClick={ e => console.log('ok chua')}
+            onClick={ e => handleClick(e) }
             className="depositBox__key"
             type="button"
+            style={{order: order}}
 			>
-            1
+            {val}
         </button>
     )
 };

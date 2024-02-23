@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import DepositBox from './components/depositBox';
+// import DepositBox from './components/depositBox';
+import Main from './components/layouts/Main';
 
 function App() {
   return (
-    <div className="App">
-        <DepositBox />
-    </div>
+    <Main />
   );
 }
 
