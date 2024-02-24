@@ -12,3 +12,8 @@ export const keyboardData = [
     { val: '0', order: '4' },
     { val: '⇒', order: '4' },
 ];
+
+export const KeyDeleteAll = 'CLR';
+export const KeyEnterCode = '⇒';
+// PassCodeLength should take from config file or default value
+export const PasscodeLength = 4;

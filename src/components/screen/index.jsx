@@ -1,14 +1,25 @@
 import './style.scss';
 
+import { useBoxState } from '../../redux/hooks/bookReducerState';
+import IndicatorLight from '../indicatorLight';
 
 const Screen = () => {
+    const boxState = useBoxState();
+
+    const outputDisplay = boxState.passcode.replace(/./g, '*');
     return (
-        <div className={'depositBox__screen active'}>
-            <div>{'Locked or Unlocked'}</div>
-            <div style={{ textAlign: 'right', fontSize: '32px' }}>
-                Screen Display data
+        <div>
+            <div className={'depositBox__screen'}>
+                <div className='depositBox__screen__message'>
+                    {boxState.message}
+                </div>
+                <div className='depositBox__screen__display'>
+                    {outputDisplay}
+                </div>
             </div>
+            <IndicatorLight />
         </div>
+        
     )
 };
 

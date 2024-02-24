@@ -1,5 +1,7 @@
 import './style.scss';
 import React from 'react';
+import { useDispatch } from "react-redux";
+import { setPasscode } from '../../redux/boxSlice';
 
 interface KeyConfig {
     val: string;
@@ -7,9 +9,9 @@ interface KeyConfig {
 }
 
 const Key: React.FC<KeyConfig> = ({val, order}) => {
+    const dispatch = useDispatch();
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        // update current state
-        console.log('value', e.currentTarget.textContent);
+        dispatch(setPasscode(e.currentTarget.textContent));
     }
     
     return(
