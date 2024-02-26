@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.depositBox__screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 400px;
+	height: 70px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+    box-shadow: 6px -2px 3px 5px rgba(23, 23, 23, 0.7);
+	padding: 5px;
+	background-color: $backlight-on;
+
+	&__message {
+		text-align: center;
+		font-size: 24px;
+	}
+	
+	&__display {
+		text-align: center;
+		font-size: 40px;
+	}
+}
